@@ -17,6 +17,7 @@ public class Calculatzar {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello class.  You did it!!");
+        System.out.println("Oh this is hard");
     }
     
 }
