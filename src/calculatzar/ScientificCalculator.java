@@ -11,11 +11,21 @@ package calculatzar;
  */
 public class ScientificCalculator {
     
+    //Method to find length of hypotenuse
     public static double pythagorean(double a, double b){
         return distance(0,0,a,b);
     }
     
+    //Method to determine distance from two coordinate pairs
     public static double distance (double x1,double y1,double x2, double y2){
         return Math.sqrt((Math.pow(x1,2)-Math.pow(x2,2))+(Math.pow(y1,2)-Math.pow(y2,2)));
+    }
+    
+    //Methodto represent value in scientific notation
+    public static String sciNote(double data){
+    
+    //Later
+    public static double derivative(){
+        
     }
 }
