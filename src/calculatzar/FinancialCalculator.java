@@ -42,10 +42,12 @@ public class FinancialCalculator {
     public double incomeTax(){
         return 0.0;   
     }
-    public double netWorth(){
-        return 0.0;   
+    public double netWorth(double [] amounts){
+        double temp=0;
+        for(double i:amounts){temp+=i;}
+        return temp;   
     }
-    public double mortgage(){
-        return 0.0;   
+    public double mortgage(double principal, double rate, double payments, double paymentsPerYear){
+        return principal*(((rate/paymentsPerYear)*Math.pow(1+(rate/paymentsPerYear),payments))/(Math.pow(1+(rate/paymentsPerYear),payments)-1));   
     }
 }
