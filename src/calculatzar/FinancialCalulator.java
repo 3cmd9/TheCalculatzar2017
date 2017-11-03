@@ -9,6 +9,6 @@ package calculatzar;
  *
  * @author Vasily Kapustin
  */
-public class FinancialCalculator {
+public class FinancialCalulator {
     
 }
