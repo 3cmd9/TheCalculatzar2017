@@ -21,7 +21,16 @@ package calculatzar;
 public class BaseCalculator {
     
     public static String convertToBase(int num, int base){
-        return null;
+        String out = "";
+        while(num != 0){
+            if(num%base > 9){
+                out += (char)64 + ((num%base) -9);
+            }else{
+                out += num%base;
+            }
+            num/=base;
+        }
+        return out;
     }
     
     public static int convertToDecimal(String num, int currentBase){
