@@ -46,10 +46,10 @@ public class BaseCalculator {
     }
     
     public static String square(int num, int base){
-         return null;
+        return null;
     }
     
     public static String squareRoot(int num, int base){
-         return null;
+        return null;
     }
 }
