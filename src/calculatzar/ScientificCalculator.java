@@ -22,12 +22,15 @@ public class ScientificCalculator {
         double b = y - (m * x);
         return "y = " + m + "x + " + b;
     }
-    
-    //For linear functions.
-    public double tangentLineSlope(double x, double y) {
-        
-    }
-    
-    //For quadratic functions.
-    public double tangentLineSlope(double x, double y, double z, double a, )
 }
+
+//    //For linear functions.
+//    public double tangentLineSlope(double x, double y, double m, double b) {
+//        
+//    }
+//    
+//    //For quadratic functions.
+//    public double tangentLineSlope(double x, double y, double a, double h, double k, double c) {
+//        
+//    }
+//}
