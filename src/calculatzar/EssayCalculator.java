@@ -18,6 +18,15 @@ public class EssayCalculator {
     public EssayCalculator(String ess) {
         essay = ess;
     }
+    
+    public double avgWordLength(){
+        ArrayList<String> words = splitEssay(' ');
+        double totalChar = 0;
+        for (int i= 0; i<words.size(); i++){
+            totalChar+=words.get(i).length();
+        }
+        return totalChar/words.size();
+    }
 
     public ArrayList<String> splitEssay(char c) {
         ArrayList<String> ess = new ArrayList<>();
@@ -31,11 +40,20 @@ public class EssayCalculator {
                 piece = "";
             }
         }
+        if(!piece.equals("")){
+            ess.add(piece);
+        }
         return ess;
     }
+
     public String repeatingWords (){
         ArrayList<String> writing = splitEssay(' ');
-        for (int i=0; i<)
+//        for (int i=0; i<)
     }
 
+
+    public int wordCount(){
+        String[] wSplit =essay.split(" ");
+        return wSplit.length;
+    }
 }
