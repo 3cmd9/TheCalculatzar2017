@@ -18,6 +18,13 @@ public class EssayCalculator {
     public EssayCalculator(String ess) {
         essay = ess;
     }
+    
+    public double avgWordLength(){
+        ArrayList<String> words = splitEssay(' ');
+        for (int i= 0; i<words.size(); i++){
+            
+        }
+    }
 
     public ArrayList<String> splitEssay(char c) {
         ArrayList<String> ess = new ArrayList<>();
@@ -30,6 +37,9 @@ public class EssayCalculator {
                 ess.add(piece);
                 piece = "";
             }
+        }
+        if(!piece.equals("")){
+            ess.add(piece);
         }
         return ess;
     }
