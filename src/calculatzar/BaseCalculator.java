@@ -42,11 +42,21 @@ public class BaseCalculator {
     }
     
     public static String multiply(String num1, String num2, int base){
-        return null;
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 * numInDecimal2, base);
+        
+        return multipliedValue;
     }
     
     public static String divide(String num1, String num2, int base){
-        return null;
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 / numInDecimal2, base);
+        
+        return multipliedValue;
     }
     
     public static String square(String num, int base){
