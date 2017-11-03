@@ -21,32 +21,42 @@ package calculatzar;
 public class BaseCalculator {
     
     public static String convertToBase(int num, int base){
-        
         return null;
     }
     
     public static int convertToDecimal(String num, int currentBase){
-         return 0;
+        return 0;
     }
     
     public static String add (String num1, String num2, int base){
-         return null;
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String sum = convertToBase(numInDecimal1 + numInDecimal2, base);
+        
+        return sum;
     }
     
     public static String subtract(String num1, String num2, int base){
-         return null;
+        return null;
     }
     
     public static String multiply(String num1, String num2, int base){
-         return null;
+        return null;
     }
     
     public static String divide(String num1, String num2, int base){
-     return null;
+        return null;
     }
     
-    public static String square(int num, int base){
-        return null;
+    public static String square(String num, int base){
+        int numInDecimal = convertToDecimal(num, base);
+        
+        int squaredNum = numInDecimal * numInDecimal;
+        
+        String baseSquaredNum = convertToBase(squaredNum, base);
+        
+        return baseSquaredNum;
     }
     
     public static String squareRoot(int num, int base){
