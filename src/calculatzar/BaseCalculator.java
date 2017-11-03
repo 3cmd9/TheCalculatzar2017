@@ -20,4 +20,35 @@ package calculatzar;
  */
 public class BaseCalculator {
     
+    public static String convertToBase(int base, int num){
+        
+    }
+    
+    public static int convertToDecimal(int currentBase, int num){
+        
+    }
+    
+    public static String add (int num1, int num2, int base){
+        
+    }
+    
+    public static String subtract(int num1, int num2, int base){
+        
+    }
+    
+    public static String multiply(int num1, int num2, int base){
+        
+    }
+    
+    public static String divide(int num1, int num2, int base){
+    
+    }
+    
+    public static String square(int num, int base){
+        
+    }
+    
+    public static String squareRoot(int, num, int base){
+        
+    }
 }
