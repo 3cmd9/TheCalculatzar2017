@@ -44,23 +44,28 @@ public double area(double topLen, double botLen, double height)   {
 
 
     //Method to find length of hypotenuse
-    public static double pythagorean(double a, double b){
+    public double pythagorean(double a, double b){
         return distance(0,0,a,b);
     }
     
     //Method to determine distance from two coordinate pairs
-    public static double distance (double x1,double y1,double x2, double y2){
+    public double distance (double x1,double y1,double x2, double y2){
         return Math.sqrt((Math.pow(x1,2)-Math.pow(x2,2))+(Math.pow(y1,2)-Math.pow(y2,2)));
     }
     
-    public static double positiveQuadFormula(double a, double b, double c){
+    public double positiveQuadFormula(double a, double b, double c){
         return (-b+Math.sqrt(Math.pow(a,2)-4*a*c))/(2*a);
     }
     
-    //Method to represent value in scientific notation
-//    public static String sciNote(double data){
-//        return 
-//    }
+    //Method to represent value in scientific notation, not final, may be bugged
+    public String sciNote(double data){
+        int count = 0;
+        while(data>10){
+            data/=10;
+            count++;
+        }
+        return data +"x 10^"+count;
+    }
 //    //Later
 //    public static double derivative(){
 //        
