@@ -8,7 +8,7 @@ package calculatzar;
  *
  * @author Vasily Kapustin
  */
-public class FinancialCalulator {
+public class FinancialCalculator {
     public double [] currencyValue; 
     public double tax;
     
