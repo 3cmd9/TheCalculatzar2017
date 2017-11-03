@@ -9,6 +9,30 @@ package calculatzar;
  *
  * @author 073903999
  */
+// dont ask about the name.
 public class Physistry {
-    
+    public void kinematics(){
+        
+    }
+    public void energy(){
+        
+    }
+    public void thermodynamics(){
+        
+    }
+    public void sound(){
+        
+    }
+    public void gravity(){
+        
+    }
+    public void stoich(){
+        
+    }
+    public void gas(){
+        
+    }
+    public void balance(){
+        
+    }
 }
