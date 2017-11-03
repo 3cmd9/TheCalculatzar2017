@@ -12,12 +12,18 @@ public class FinancialCalculator {
     public double [] currencyValue; 
     public double tax;
     
-    public double simpleInterest(){
-        return 0.0;   
+    public double simpleInterest(double principle, int year,double interestRate){
+        for(int i=0;i<year;i++){
+        principle+=principle*interestRate/100;
+        }
+        return principle;
     }
     
-    public double compoundInterest(){
-        return 0.0;   
+    public double compoundInterest(double principle, int year,double interestRate){
+        for(int i=0;i<year;i++){
+        principle*=1+(interestRate/100);
+        }
+        return principle;
     }
     
     public double currencyConversion(){
