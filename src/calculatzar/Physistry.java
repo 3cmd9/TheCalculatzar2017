@@ -5,34 +5,59 @@
  */
 package calculatzar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author 073903999
  */
 // dont ask about the name.
 public class Physistry {
-    public void kinematics(){
+    //sanjula
+
+    Scanner s = new Scanner(System.in);
+
+    public void kinematics() {
+
+        System.out.println("Displacement: ");
         
+        System.out.println("Time:");
     }
-    public void energy(){
-        
+
+    public void sound() {
+
     }
-    public void thermodynamics(){
-        
+
+    //glen
+
+    public void thermodynamics() {
+
     }
-    public void sound(){
-        
+
+    public void gas() {
+
     }
-    public void gravity(){
-        
+
+    //carson
+    public void energy() {
+
     }
-    public void stoich(){
-        
+
+    public void gravity() {
+
     }
-    public void gas(){
-        
+
+    //asher
+
+    public void stoich() {
+
     }
-    public void balance(){
-        
+
+    public void balance() {
+
+    }
+
+    public void getChem() {
+
     }
 }

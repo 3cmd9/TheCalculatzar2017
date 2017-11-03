@@ -13,42 +13,56 @@ package calculatzar;
  *  convertToDecimal(int currentBase, int num);     Leo
  *  add (int num1, int num2, int base);             Richard
  *  subtract(int num1, int num2, int base);         Kaiyi
- *  multiply(int num1, int num2, int base_;         Luke
+ *  multiply(int num1, int num2, int base);         Luke
  *  divide(int num1, int num2 int base);            Leo
  *  square(int num, int base);                      Richard
  *  squareRoot(int, num, int base);                 Kaiyi
  */
 public class BaseCalculator {
     
-    public static String convertToBase(int base, int num){
+    public static String convertToBase(int num, int base){
         return null;
     }
     
-    public static int convertToDecimal(int currentBase, int num){
-         return 0;
+    public static int convertToDecimal(String num, int currentBase){
+        return 0;
     }
     
-    public static String add (int num1, int num2, int base){
-         return null;
+    public static String add (String num1, String num2, int base){
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String sum = convertToBase(numInDecimal1 + numInDecimal2, base);
+        
+        return sum;
     }
     
-    public static String subtract(int num1, int num2, int base){
-         return null;
+    public static String subtract(String num1, String num2, int base){
+        return null;
     }
     
-    public static String multiply(int num1, int num2, int base){
-         return null;
+    public static String multiply(String num1, String num2, int base){
+        return null;
     }
     
-    public static String divide(int num1, int num2, int base){
-     return null;
+    public static String divide(String num1, String num2, int base){
+        return null;
     }
     
-    public static String square(int num, int base){
-         return null;
+    public static String square(String num, int base){
+        int numInDecimal = convertToDecimal(num, base);
+        
+        int squaredNum = numInDecimal * numInDecimal;
+        
+        String baseSquaredNum = convertToBase(squaredNum, base);
+        
+        return baseSquaredNum;
     }
     
-    public static String squareRoot(int num, int base){
-         return null;
+    public static String squareRoot(String num, int base){
+        int numberInDec = convertToDecimal(num, base);
+        int sqrtNum = (int)Math.pow(numberInDec, 1/base);
+        String baseSqrtNum = convertToBase(sqrtNum, base);
+        return null;
     }
 }
