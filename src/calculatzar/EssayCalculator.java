@@ -45,5 +45,8 @@ public class EssayCalculator {
         }
         return ess;
     }
-
+    public int wordCount(){
+        String[] wSplit =essay.split(" ");
+        return wSplit.length;
+    }
 }
