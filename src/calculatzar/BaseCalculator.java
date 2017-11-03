@@ -21,34 +21,34 @@ package calculatzar;
 public class BaseCalculator {
     
     public static String convertToBase(int base, int num){
-        
+        return null;
     }
     
     public static int convertToDecimal(int currentBase, int num){
-        
+         return null;
     }
     
     public static String add (int num1, int num2, int base){
-        
+         return null;
     }
     
     public static String subtract(int num1, int num2, int base){
-        
+         return null;
     }
     
     public static String multiply(int num1, int num2, int base){
-        
+         return null;
     }
     
     public static String divide(int num1, int num2, int base){
-    
+     return null;
     }
     
     public static String square(int num, int base){
-        
+         return null;
     }
     
-    public static String squareRoot(int, num, int base){
-        
+    public static String squareRoot(int num, int base){
+         return null;
     }
 }
