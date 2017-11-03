@@ -9,6 +9,39 @@ package calculatzar;
  *
  * @author 073903999
  */
+// dont ask about the name.
 public class Physistry {
+    //sanjula
+    public void kinematics(){
+        
+    }
+    public void sound(){
+        
+    }
+    //glen
+    public void thermodynamics(){
+        
+    }
+    public void gas(){
+        
+    }
     
+    //carson
+    public void energy(){
+        
+    }
+    public void gravity(){
+        
+    }
+    //asher
+    public void stoich(){
+        
+    }
+    public void balance(){
+        
+    }
+    
+    public void getChem(){
+        
+    }
 }

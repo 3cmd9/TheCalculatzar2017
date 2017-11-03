@@ -21,27 +21,27 @@ package calculatzar;
 public class BaseCalculator {
     
     public static String convertToBase(int base, int num){
-       
-        return null;
-    }
     
-    public static int convertToDecimal(int currentBase, int num){
+        return null;
+    }    
+    
+    public static int convertToDecimal(String num, int currentBase){
          return 0;
     }
     
-    public static String add (int num1, int num2, int base){
+    public static String add (String num1, String num2, int base){
          return null;
     }
     
-    public static String subtract(int num1, int num2, int base){
+    public static String subtract(String num1, String num2, int base){
          return null;
     }
     
-    public static String multiply(int num1, int num2, int base){
+    public static String multiply(String num1, String num2, int base){
          return null;
     }
     
-    public static String divide(int num1, int num2, int base){
+    public static String divide(String num1, String num2, int base){
      return null;
     }
     
