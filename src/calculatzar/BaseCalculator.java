@@ -10,17 +10,18 @@ package calculatzar;
  * 
  * Methods:
  *  convertToBase(int base, int num);               Luke
- *  convertToDecimal(int currentBase, int num);     Leo
- *  add (int num1, int num2, int base);             Richard
- *  subtract(int num1, int num2, int base);         Kaiyi
- *  multiply(int num1, int num2, int base_;         Luke
- *  divide(int num1, int num2 int base);            Leo
- *  square(int num, int base);                      Richard
- *  squareRoot(int, num, int base);                 Kaiyi
+ *  convertToDecimal(int currentBase, String num);     Leo/Sean
+ *  add (String num1, String num2, int base);             Richard
+ *  subtract(String num1, String num2, int base);         Kaiyi
+ *  multiply(String num1, String num2, int base_;         Luke
+ *  divide(String num1, String num2, int base);            Leo
+ *  square(String num, int base);                      Richard
+ *  squareRoot(String num, int base);                 Kaiyi
  */
 public class BaseCalculator {
     
     public static String convertToBase(int base, int num){
+       
         return null;
     }
     
