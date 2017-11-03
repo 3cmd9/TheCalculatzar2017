@@ -7,8 +7,8 @@ package calculatzar;
 
 /**
  *
- * @author 069986115
+ * @author dunca
  */
 public class ScientificCalculator {
-    //Addd
+    
 }
