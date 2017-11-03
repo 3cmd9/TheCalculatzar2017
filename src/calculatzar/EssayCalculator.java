@@ -19,6 +19,15 @@ public class EssayCalculator {
         essay = ess;
     }
     
+    String tempEssay= essay
+            for (int i=0; i<tempEssay.length(); i++){
+    if (tempEssay.charAt(i)!=','){
+        essay+=tempEssay.charAt(i);
+    }
+    ArrayList<String> words = splitEssay(' ')
+            essay = tempEssay;
+}
+    
     public double avgWordLength(){
         ArrayList<String> words = splitEssay(' ');
         double totalChar = 0;
@@ -48,5 +57,12 @@ public class EssayCalculator {
     public int wordCount(){
         String[] wSplit =essay.split(" ");
         return wSplit.length;
+    }
+    public int sentenceCount(){
+        String[] sSplit = essay.split(".\\?\\!");
+        return sSplit.length;
+    }
+    public int charCountSpaces(){
+        return essay.length();
     }
 }
