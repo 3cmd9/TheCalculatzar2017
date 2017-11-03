@@ -25,7 +25,7 @@ public class BaseCalculator {
     }
     
     public static int convertToDecimal(int currentBase, int num){
-         return null;
+         return 0;
     }
     
     public static String add (int num1, int num2, int base){
