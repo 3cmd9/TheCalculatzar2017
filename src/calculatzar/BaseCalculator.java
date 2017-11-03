@@ -41,13 +41,23 @@ public class BaseCalculator {
 
         return null;
     }
-
-    public static String multiply(String num1, String num2, int base) {
-        return null;
+    
+    public static String multiply(String num1, String num2, int base){
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 * numInDecimal2, base);
+        
+        return multipliedValue;
     }
-
-    public static String divide(String num1, String num2, int base) {
-        return null;
+    
+    public static String divide(String num1, String num2, int base){
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 / numInDecimal2, base);
+        
+        return multipliedValue;
     }
 
     public static String square(String num, int base) {
@@ -64,6 +74,6 @@ public class BaseCalculator {
         int numberInDec = convertToDecimal(num, base);
         int sqrtNum = (int) Math.pow(numberInDec, 1 / base);
         String baseSqrtNum = convertToBase(sqrtNum, base);
-        return null;
+        return baseSqrtNum;
     }
 }
