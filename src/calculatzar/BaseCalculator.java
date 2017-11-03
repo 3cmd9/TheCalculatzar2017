@@ -13,7 +13,7 @@ package calculatzar;
  *  convertToDecimal(int currentBase, int num);     Leo
  *  add (int num1, int num2, int base);             Richard
  *  subtract(int num1, int num2, int base);         Kaiyi
- *  multiply(int num1, int num2, int base_;         Luke
+ *  multiply(int num1, int num2, int base);         Luke
  *  divide(int num1, int num2 int base);            Leo
  *  square(int num, int base);                      Richard
  *  squareRoot(int, num, int base);                 Kaiyi
@@ -49,7 +49,10 @@ public class BaseCalculator {
         return null;
     }
     
-    public static String squareRoot(int num, int base){
+    public static String squareRoot(String num, int base){
+        int numberInDec = convertToDecimal(num, base);
+        int sqrtNum = (int)Math.pow(numberInDec, 1/base);
+        String baseSqrtNum = convertToBase(sqrtNum, base);
         return null;
     }
 }
