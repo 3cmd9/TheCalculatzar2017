@@ -64,6 +64,6 @@ public class BaseCalculator {
         int numberInDec = convertToDecimal(num, base);
         int sqrtNum = (int) Math.pow(numberInDec, 1 / base);
         String baseSqrtNum = convertToBase(sqrtNum, base);
-        return null;
+        return baseSqrtNum;
     }
 }
