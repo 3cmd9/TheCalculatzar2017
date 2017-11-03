@@ -21,9 +21,11 @@ public class EssayCalculator {
     
     public double avgWordLength(){
         ArrayList<String> words = splitEssay(' ');
+        double totalChar = 0;
         for (int i= 0; i<words.size(); i++){
-            
+            totalChar+=words.get(i).length();
         }
+        return totalChar/words.size();
     }
 
     public ArrayList<String> splitEssay(char c) {
