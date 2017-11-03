@@ -10,5 +10,4 @@ package calculatzar;
  * @author Zhaojingyu
  */
 public class FinancialCalculator {
-    
 }
