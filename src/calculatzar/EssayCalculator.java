@@ -33,5 +33,9 @@ public class EssayCalculator {
         }
         return ess;
     }
+    public String repeatingWords (){
+        ArrayList<String> writing = splitEssay(' ');
+        for (int i=0; i<)
+    }
 
 }
