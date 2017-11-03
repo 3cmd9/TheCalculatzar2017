@@ -62,4 +62,7 @@ public class EssayCalculator {
         String[] sSplit = essay.split(".\\?\\!");
         return sSplit.length;
     }
+    public int charCountSpaces(){
+        return essay.length();
+    }
 }
