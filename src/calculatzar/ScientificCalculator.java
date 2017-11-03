@@ -53,7 +53,11 @@ public double area(double topLen, double botLen, double height)   {
         return Math.sqrt((Math.pow(x1,2)-Math.pow(x2,2))+(Math.pow(y1,2)-Math.pow(y2,2)));
     }
     
-    //Methodto represent value in scientific notation
+    public static double positiveQuadFormula(double a, double b, double c){
+        return (-b+Math.sqrt(Math.pow(a,2)-4*a*c))/(2*a);
+    }
+    
+    //Method to represent value in scientific notation
 //    public static String sciNote(double data){
 //        return 
 //    }
@@ -61,9 +65,6 @@ public double area(double topLen, double botLen, double height)   {
 //    public static double derivative(){
 //        
 //    }
-}
-
-
 }
 
 //    //For linear functions.
