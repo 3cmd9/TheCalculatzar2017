@@ -10,45 +10,92 @@ package calculatzar;
  * 
  * Methods:
  *  convertToBase(int base, int num);               Luke
- *  convertToDecimal(int currentBase, int num);     Leo
- *  add (int num1, int num2, int base);             Richard
- *  subtract(int num1, int num2, int base);         Kaiyi
- *  multiply(int num1, int num2, int base_;         Luke
- *  divide(int num1, int num2 int base);            Leo
- *  square(int num, int base);                      Richard
- *  squareRoot(int, num, int base);                 Kaiyi
+ *  convertToDecimal(int currentBase, String num);     Leo/Sean
+ *  add (String num1, String num2, int base);             Richard
+ *  subtract(String num1, String num2, int base);         Kaiyi
+ *  multiply(String num1, String num2, int base_;         Luke
+ *  divide(String num1, String num2, int base);            Leo
+ *  square(String num, int base);                      Richard
+ *  squareRoot(String num, int base);                 Kaiyi
  */
 public class BaseCalculator {
     
-    public static String convertToBase(int base, int num){
+    public static String convertToBase(int num, int base){
+        String out = "";
+        while(num != 0){
+            if(num%base > 9){
+                out = (char)(64 + ((num%base) -9)) + out;
+            }else{
+                out = num%base + out;
+            }
+            num/=base;
+        }
+        return out;
+    }
+
+    public static int convertToDecimal(String num, int currentBase) {
+        int v = 0;
+        int total = 0;
+        int pow = 0;
+        for (int i = num.length() - 1; i >= 0; i--) {
+            char c = num.charAt(i);
+            v = c - '0';
+            total += v * Math.pow(currentBase, pow);
+            pow++;
+        }
+        return total;
+    }
+
+    public static String add(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String sum = convertToBase(numInDecimal1 + numInDecimal2, base);
+
+        return sum;
+    }
+
+    public static String subtract(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String sum = convertToBase(numInDecimal1 - numInDecimal2, base);
+
         return null;
     }
-    
-    public static int convertToDecimal(int currentBase, int num){
-         return 0;
+
+    public static String multiply(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String multipliedValue = convertToBase(numInDecimal1 * numInDecimal2, base);
+
+        return multipliedValue;
     }
-    
-    public static String add (int num1, int num2, int base){
-         return null;
+
+    public static String divide(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String multipliedValue = convertToBase(numInDecimal1 / numInDecimal2, base);
+
+        return multipliedValue;
     }
-    
-    public static String subtract(int num1, int num2, int base){
-         return null;
+
+    public static String square(String num, int base) {
+        int numInDecimal = convertToDecimal(num, base);
+
+        int squaredNum = numInDecimal * numInDecimal;
+
+        String baseSquaredNum = convertToBase(squaredNum, base);
+
+        return baseSquaredNum;
     }
-    
-    public static String multiply(int num1, int num2, int base){
-         return null;
-    }
-    
-    public static String divide(int num1, int num2, int base){
-     return null;
-    }
-    
-    public static String square(int num, int base){
-         return null;
-    }
-    
-    public static String squareRoot(int num, int base){
-         return null;
+
+    public static String squareRoot(String num, int base) {
+        int numberInDec = convertToDecimal(num, base);
+        int sqrtNum = (int) Math.pow(numberInDec, 1 / base);
+        String baseSqrtNum = convertToBase(sqrtNum, base);
+        return baseSqrtNum;
     }
 }
