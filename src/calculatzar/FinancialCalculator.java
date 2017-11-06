@@ -94,7 +94,7 @@ public class FinancialCalculator {
         return 0.0;   
     }
     public double profit(){
-        return 0.0;   
+        return 1.0;  
     }
     public double incomeTax(){
         return 0.0;   
