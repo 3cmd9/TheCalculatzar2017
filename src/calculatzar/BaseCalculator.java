@@ -32,37 +32,61 @@ public class BaseCalculator {
         }
         return out;
     }
-    
-    public static int convertToDecimal(String num, int currentBase){
+
+    public static int convertToDecimal(String num, int currentBase) {
         return 0;
     }
-    
-    public static String add (String num1, String num2, int base){
-        int number1 = convertToDecimal(num1, base);
-        int number2 = convertToDecimal(num2, base);
-        
-        String sum = convertToBase(number1 + number2, base);
-        
+
+    public static String add(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String sum = convertToBase(numInDecimal1 + numInDecimal2, base);
+
         return sum;
     }
-    
-    public static String subtract(String num1, String num2, int base){
+
+    public static String subtract(String num1, String num2, int base) {
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+
+        String sum = convertToBase(numInDecimal1 - numInDecimal2, base);
+
         return null;
     }
     
     public static String multiply(String num1, String num2, int base){
-        return null;
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 * numInDecimal2, base);
+        
+        return multipliedValue;
     }
     
     public static String divide(String num1, String num2, int base){
-        return null;
+        int numInDecimal1 = convertToDecimal(num1, base);
+        int numInDecimal2 = convertToDecimal(num2, base);
+        
+        String multipliedValue = convertToBase(numInDecimal1 / numInDecimal2, base);
+        
+        return multipliedValue;
     }
-    
-    public static String square(int num, int base){
-        return null;
+
+    public static String square(String num, int base) {
+        int numInDecimal = convertToDecimal(num, base);
+
+        int squaredNum = numInDecimal * numInDecimal;
+
+        String baseSquaredNum = convertToBase(squaredNum, base);
+
+        return baseSquaredNum;
     }
-    
-    public static String squareRoot(int num, int base){
-        return null;
+
+    public static String squareRoot(String num, int base) {
+        int numberInDec = convertToDecimal(num, base);
+        int sqrtNum = (int) Math.pow(numberInDec, 1 / base);
+        String baseSqrtNum = convertToBase(sqrtNum, base);
+        return baseSqrtNum;
     }
 }
