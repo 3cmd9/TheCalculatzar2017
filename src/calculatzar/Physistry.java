@@ -19,33 +19,25 @@ public class Physistry {
 
     public void displacementKinematicsSolver() {
         System.out.println("Time (s):");
-        double time = s.nextDouble();
-
+        double time = s.nextDouble();        
         System.out.println("Acceleration (m/s²):");
         double acceleration = s.nextDouble();
-
         System.out.println("Initial Velocity (m/s):");
         double velocityI = s.nextDouble();
-
         System.out.println("Final Velocity (m/s):");
         double velovityF = s.nextDouble();
-
         System.out.println("Displacement = " + (velocityI * time + (1 / 2) * acceleration * Math.pow(time, 2)) + "m");
     }
 
     public void dopplerEffect() {
         System.out.println("Frequency of Source:");
         double frequency = s.nextDouble();
-
         System.out.println("Speed of Wave:");
         double wave = s.nextDouble();
-
         System.out.println("Speed of Detector:");
         double detector = s.nextDouble();
-
         System.out.println("Speed of Sourcee:");
         double source = s.nextDouble();
-
         System.out.println("Doppler Frequency = " + frequency * ((wave + detector) / (wave - source)));
     }
 
