@@ -65,4 +65,17 @@ public class EssayCalculator {
     public int charCountSpaces(){
         return essay.length();
     }
+    public int charCountNoSpaces(){
+        int cCount=0;
+        for(int i=0; i<essay.length();i++){
+            if(essay.charAt(i)!=' '){
+                cCount++;
+            }
+        }
+        return cCount;
+    }
+    public int parCount(){
+        String[] pSplit = essay.split("\n");
+        return pSplit.length;
+    }
 }
