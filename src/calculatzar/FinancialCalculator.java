@@ -29,10 +29,10 @@ public class FinancialCalculator {
     Scanner s = new Scanner(System.in);
     switch(s.nextInt()){
         case 1:
-            simpleInterest(1000,1,3);
+            simpleInterest();
             break;
             case 2:
-                compoundInterest(1000,1,3);
+                compoundInterest();
             break;
             case 3:
                 currencyConversion();
@@ -61,14 +61,28 @@ public class FinancialCalculator {
     
             
     }
-    public double simpleInterest(double principle, int year,double interestRate){
+    public double simpleInterest(){
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please enter in the principle amount: ");
+       double principle=s.nextDouble();
+        System.out.println("Please enter in the number of years:");
+        double year=s.nextDouble();
+        System.out.println("Please enter in the interest rate, leave the percentage sign (e.g. 3% interest should be entered as 3): ");
+        double interestRate=s.nextDouble();
         for(int i=0;i<year;i++){
         principle+=principle*interestRate/100;
         }
         return principle;
     }
     
-    public double compoundInterest(double principle, int year,double interestRate){
+    public double compoundInterest(){
+          Scanner s = new Scanner(System.in);
+        System.out.println("Please enter in the principle amount: ");
+       double principle=s.nextDouble();
+        System.out.println("Please enter in the number of years:");
+        double year=s.nextDouble();
+        System.out.println("Please enter in the interest rate, leave the percentage sign (e.g. 3% interest should be entered as 3): ");
+        double interestRate=s.nextDouble();
         for(int i=0;i<year;i++){
         principle*=1+(interestRate/100);
         }
