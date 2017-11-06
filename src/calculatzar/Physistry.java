@@ -18,19 +18,19 @@ public class Physistry {
     Scanner s = new Scanner(System.in);
 
     public void displacementKinematicsSolver() {
-        System.out.println("Time:");
+        System.out.println("Time (s):");
         double time = s.nextDouble();
 
-        System.out.println("Acceleration:");
+        System.out.println("Acceleration (m/s²):");
         double acceleration = s.nextDouble();
 
-        System.out.println("Initial Velocity:");
+        System.out.println("Initial Velocity (m/s):");
         double velocityI = s.nextDouble();
 
-        System.out.println("Final Velocity:");
+        System.out.println("Final Velocity (m/s):");
         double velovityF = s.nextDouble();
 
-        System.out.println("Displacement = " + velocityI * time + (1 / 2) * acceleration * Math.pow(time, 2));
+        System.out.println("Displacement = " + (velocityI * time + (1 / 2) * acceleration * Math.pow(time, 2)) + "m");
     }
 
     public void dopplerEffect() {
