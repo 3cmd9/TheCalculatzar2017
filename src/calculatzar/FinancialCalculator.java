@@ -14,75 +14,73 @@ import java.util.Scanner;
 public class FinancialCalculator {
     public double [] currencyValue; 
     public double tax;
+    private static Scanner in = new Scanner(System.in);
+    
     public void menu(){
-    System.out.println("Choose what you want to do:");
-    System.out.println("1.Simple Interest");
-    System.out.println("2.Compound Interest");
-    System.out.println("3.Currency Conversion");
-    System.out.println("4.Tax");
-    System.out.println("5.Total Tax");
-    System.out.println("6.Profit");
-    System.out.println("7.Income Tax");
-    System.out.println("8.Net Worth");
-    System.out.println("9.Mortgage");
-    
-    Scanner s = new Scanner(System.in);
-    switch(s.nextInt()){
-        case 1:
-            simpleInterest();
-            break;
-            case 2:
-                compoundInterest();
-            break;
-            case 3:
-                currencyConversion();
-            break;
-            case 4:
-                tax();
-            break;
-            case 5:
-                taxedTotal();
-            break;
-            case 6:
-                profit();
-            break;
-            case 7:
-                incomeTax();
-            break;
-            case 8:
-                netWorth();
-            default:
-                mortgage();
+        System.out.println("Choose what you want to do:");
+        System.out.println("1.Simple Interest");
+        System.out.println("2.Compound Interest");
+        System.out.println("3.Currency Conversion");
+        System.out.println("4.Tax");
+        System.out.println("5.Total Tax");
+        System.out.println("6.Profit");
+        System.out.println("7.Income Tax");
+        System.out.println("8.Net Worth");
+        System.out.println("9.Mortgage");
+        
+        switch(in.nextInt()){
+            case 1:
+                simpleInterest();
                 break;
-    }
-    
+                case 2:
+                    compoundInterest();
+                break;
+                case 3:
+                    currencyConversion();
+                break;
+                case 4:
+                    tax();
+                break;
+                case 5:
+                    taxedTotal();
+                break;
+                case 6:
+                    profit();
+                break;
+                case 7:
+                    incomeTax();
+                break;
+                case 8:
+                    netWorth();
+                default:
+                    mortgage();
+                    break;
+        }
     }
     public void simpleInterest(){
-        Scanner s = new Scanner(System.in);
         System.out.println("Please enter in the principle amount: ");
-       double principle=s.nextDouble();
+        double principle=in.nextDouble();
         System.out.println("Please enter in the number of years:");
-        double year=s.nextDouble();
+        double year=in.nextDouble();
         System.out.println("Please enter in the interest rate, leave the percentage sign (e.g. 3% interest should be entered as 3): ");
-        double interestRate=s.nextDouble();
+        double interestRate=in.nextDouble();
         for(int i=0;i<year;i++){
-        principle+=principle*interestRate/100;
+            principle+=principle*interestRate/100;
         }
         System.out.println("Your final amount is: "+principle);
     }
     
     public void compoundInterest(){
-          Scanner s = new Scanner(System.in);
         System.out.println("Please enter in the principle amount: ");
-       double principle=s.nextDouble();
+        double principle=in.nextDouble();
         System.out.println("Please enter in the number of years:");
-        double year=s.nextDouble();
+        double year=in.nextDouble();
         System.out.println("Please enter in the interest rate, leave the percentage sign (e.g. 3% interest should be entered as 3): ");
-        double interestRate=s.nextDouble();
+        double interestRate=in.nextDouble();
         for(int i=0;i<year;i++){
-        principle*=1+(interestRate/100);
+            principle*=1+(interestRate/100);
         }
-         System.out.println("Your final amount is: "+principle);
+        System.out.println("Your final amount is: "+principle);
     }
     
     public double currencyConversion(){
@@ -101,8 +99,7 @@ public class FinancialCalculator {
     public double incomeTax(){
         return 0.0;   
     }
-    public void netWorth(){
-        Scanner in= new Scanner(System.in); 
+    public void netWorth(){ 
         System.out.println("Please input the values of your individual assests");
         String str = in.nextLine();
         double temp=0;
@@ -117,7 +114,6 @@ public class FinancialCalculator {
         System.out.println("You net worth is "+temp);
     }
     public void mortgage(){
-        Scanner in= new Scanner(System.in);
         System.out.println("Please input the principal amount of your mortgage");
         double principal = in.nextDouble();
         System.out.println("Please input the rate of your mortgage");
