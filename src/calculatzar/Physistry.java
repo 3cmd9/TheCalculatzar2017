@@ -59,15 +59,19 @@ public class Physistry {
     }
 
     //carson
-    public void energy() {
-       System.out.println("Enter Mass (KG): ");
+    public double energy() {
+       System.out.println("This Program Will Return Kinetic Energy");
+       System.out.print("Enter Mass (KG): ");
        double m = s.nextDouble();
-       System.out.println("Enter Speed of Object: ");
+       System.out.print("Enter Speed of Object: ");
        double v = s.nextDouble();
+       double Ek = ((Math.pow(v,2))*m)/2;
+       return Ek;
     }
 
     public double gravity() {
         final double G = 6.67*Math.pow(10, -11);
+        System.out.println("This Program Will Return The Force of Gravity");
         System.out.print("Enter Mass 1 (KG): ");
         double m1 = s.nextDouble();
         System.out.print("Enter Mass 2 (KG): ");
