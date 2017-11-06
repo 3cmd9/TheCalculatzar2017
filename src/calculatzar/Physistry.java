@@ -39,7 +39,7 @@ public class Physistry {
     }
 
     //glen
-    public void thermodynamics() {
+   public void thermodynamics() {
         //Ideal Gas Law
         double Pressure = s.nextDouble();
         double Volume = s.nextDouble();
@@ -51,7 +51,6 @@ public class Physistry {
         Pressure = (n*gasConstant*temp)/Volume;
         //solve for Volume
         Volume = (n*gasConstant*temp)/Pressure;
-        
     }
 
     public void gas() {
