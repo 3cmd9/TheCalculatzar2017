@@ -50,16 +50,12 @@ public class FinancialCalculator {
                 incomeTax();
             break;
             case 8:
-                netWorth(new double[]{0,1,2});
+                netWorth();
             default:
-                mortgage(1,1,1,1);
+                mortgage();
                 break;
-            
-    
     }
     
-    
-            
     }
     public void simpleInterest(){
         Scanner s = new Scanner(System.in);
@@ -118,7 +114,6 @@ public class FinancialCalculator {
             }
             str = in.nextLine();
         }
-        
         System.out.println("You net worth is "+temp);
     }
     public void mortgage(){
@@ -132,7 +127,7 @@ public class FinancialCalculator {
         System.out.println("Please input the frequency of the payments");
         double paymentsPerYear = in.nextDouble();
         double pay = principal*(((rate/paymentsPerYear)*Math.pow(1+(rate/paymentsPerYear),payments))/(Math.pow(1+(rate/paymentsPerYear),payments)-1));   
-        System.out.println("The amount needed to pay per months is " + pay);
+        System.out.println("The required amount to pay per months is " + pay);
     
     
     }
