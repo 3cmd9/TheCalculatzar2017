@@ -21,11 +21,12 @@ public class BaseCalculator {
     }
 
     public static int convertToDecimal(String num, int currentBase) {
-        String str = num + "";
         int v = 0;
         int total = 0;
         int pow = 0;
-        for (int i = str.length() - 1; i >= 0; i--) {
+        for (int i = num.length() - 1; i >= 0; i--) {
+            char c = num.charAt(i);
+            v = c - '0';
             total += v * Math.pow(currentBase, pow);
             pow++;
         }
