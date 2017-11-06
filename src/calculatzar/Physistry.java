@@ -50,26 +50,38 @@ public class Physistry {
     }
 
     //glen
-   public void specificHeat() {
-        
+   public void specificHeatinWater() {
+       //in Joules
+        double q;
+        //in grams
+        System.out.println("Input the mass of the substance in GRAMS");
+        double mass = s.nextDouble();
+        //in water, in J/g*temp in Celcius
+        double specificHeat = 4.18;
+        //in celcius
+        System.out.println("Input initial temperature in CELCIUS");
+        double initTemp = s.nextDouble();
+//        in celcius
+        System.out.println("Input final temperature in CELCIUS");
+        double finalTemp = s.nextDouble();
+        q = mass*specificHeat*(finalTemp-initTemp);
+        System.out.println("Heat energy required = "+q+" Joules");
     }
 
-    public void idealGasLaw() {
+    public void idealGasLaw4Pressure() {
         //Ideal Gas Law
-        double Pressure = s.nextDouble();
+        double Pressure;
+        System.out.println("Input volume in LITRES");
         double Volume = s.nextDouble();
+        System.out.println("Input moles in MOL");
         double n = s.nextDouble();
         //(L*mmHg)/(mol*K)
         double gasConstant = 62.4;
+        System.out.println("Input temperature in KELVIN");
         double temp = s.nextDouble();
         //solve for pressure
         Pressure = (n * gasConstant * temp) / Volume;
-        //solve for Volume
-        Volume = (n*gasConstant*temp)/Pressure;
-        //solve for moles
-        n = (Pressure*Volume)/(gasConstant*temp);
-        //solve for temperature
-        temp = (Pressure*Volume)/(n*gasConstant);
+        System.out.println("Pressure = "+Pressure+" mmHg");
     }
 
     //carson
