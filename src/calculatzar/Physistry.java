@@ -60,16 +60,19 @@ public class Physistry {
 
     //carson
     public void energy() {
-
+       System.out.println("Enter Mass (KG): ");
+       double m = s.nextDouble();
+       System.out.println("Enter Speed of Object: ");
+       double v = s.nextDouble();
     }
 
     public double gravity() {
         final double G = 6.67*Math.pow(10, -11);
-        System.out.println("Enter Mass 1 (KG): ");
+        System.out.print("Enter Mass 1 (KG): ");
         double m1 = s.nextDouble();
-        System.out.println("Enter Mass 2 (KG): ");
+        System.out.print("Enter Mass 2 (KG): ");
         double m2 = s.nextDouble();
-        System.out.println("Enter Distance between Mass 1 and Mass 2: ");
+        System.out.print("Enter Distance between Mass 1 and Mass 2: ");
         double r = s.nextDouble();
         double F = (G*m1*m2)/(Math.pow(r, 2));
         System.out.println(F);
