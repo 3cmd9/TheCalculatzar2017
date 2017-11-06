@@ -5,6 +5,8 @@
  */
 package calculatzar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dunca
@@ -65,6 +67,51 @@ public double area(double topLen, double botLen, double height)   {
             count++;
         }
         return data +"x 10^"+count;
+    }
+    
+    //Interface
+    public void menu(){
+        System.out.println("Welcome to Scientific Calculator.");
+        System.out.println("Press 1 to access slope function");
+        System.out.println("Press 2 to access equation of line function");
+        System.out.println("Press 3 to access area of triangle/rectangle function");
+        System.out.println("Press 4 to access area of trapezoid function");
+        System.out.println("Press 5 to access pythagorean function");
+        System.out.println("Press 6 to access distance function");
+        System.out.println("Press 7 to access qadratic formula (positive) function");
+        System.out.println("Press 8 to access scientific notation function");
+        System.out.println("Press 9 to exit");
+        int input = 0;
+        Scanner kb = new Scanner(System.in);
+        do{
+            input=kb.nextInt();
+            switch(input){
+                case 1:
+                    slope(kb.nextDouble(),kb.nextDouble(),kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 2:
+                    equation(kb.nextDouble(),kb.nextDouble(),kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 3:
+                    area(kb.nextDouble(),kb.nextDouble(),kb.nextLine());
+                    break;
+                case 4:
+                    area(kb.nextDouble(),kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 5:
+                    pythagorean(kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 6:
+                    distance(kb.nextDouble(),kb.nextDouble(),kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 7:
+                    positiveQuadFormula(kb.nextDouble(),kb.nextDouble(),kb.nextDouble());
+                    break;
+                case 8:
+                    sciNote(kb.nextDouble());
+                    break;
+            }
+        }while(input!=9);
     }
 //    //Later
 //    public static double derivative(){
