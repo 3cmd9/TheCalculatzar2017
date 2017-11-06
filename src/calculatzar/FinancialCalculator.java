@@ -93,12 +93,33 @@ public class FinancialCalculator {
     public double taxedTotal(){
         return 0.0;   
     }
-    public double profit(){
-        return 1.0;  
+    
+    public double profit(double revenue, double expenses){
+        return revenue - expenses;
     }
-    public double incomeTax(){
-        return 0.0;   
-    }
+    
+    /*public double federalIncomeTax(double income){
+        double totalTax = 0;
+        final double[] federalRates = {0.15, 0.205, 0.26, 0.29, 0.33};
+        final double[] federalBrackets = {45916, 45915, 50522, 60477};
+        
+        for (double i = 0; i < federalBrackets.length; i++) {          
+            if (income > 0) {
+                if (income > federalBrackets[i]) {
+                    totalTax += federalBrackets[i] * federalRates[i];
+                    income -= federalBrackets[i];
+                } else {
+                    totalTax += income * federalRates[i];
+                    income = 0;
+                    break;
+                }
+            }
+        }
+        totalTax += income * 0.33;
+        
+        return totalTax;  
+    }*/
+    
     public void netWorth(){ 
         System.out.println("Please input the values of your individual assests");
         String str = in.nextLine();
