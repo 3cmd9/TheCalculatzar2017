@@ -86,15 +86,65 @@ public class Physistry {
     }
 
     //asher
-    public void stoich() {
-
+    public double wavelength() {
+        double h = 6.63 * Math.pow(10, -34);
+        double w = 0;
+        double v = 0;
+        double m = 0;
+        char a = 'w';
+        System.out.println("input w(wavelength), v(velocity), or m(mass)");
+        a = s.next().charAt(0);
+        switch(a){
+            case 'v':
+                System.out.println("input mass");
+                m = s.nextDouble();
+                System.out.println("input wavelength");
+                w = s.nextDouble();
+                return (h/(m*w));
+            case 'm':
+                System.out.println("input velocity");
+                v = s.nextDouble();
+                System.out.println("input wavelength");
+                w = s.nextDouble();
+                return (h/(v*w));    
+            default:
+                System.out.println("input mass");
+                m = s.nextDouble();
+                System.out.println("input velocity");
+                v = s.nextDouble();
+                return (h/(m*v));
+        }
+         
+    }
+    
+    public double momentum() {
+        double p = 0;
+        double v = 0;
+        double m = 0;
+        char a = 'p';
+        System.out.println("input p(momentum), v(velocity), or m(mass)");
+        a = s.next().charAt(0);
+        switch(a){
+            case 'v':
+                System.out.println("input mass");
+                m = s.nextDouble();
+                System.out.println("input momentum");
+                p = s.nextDouble();
+                return (m/p);
+            case 'm':
+                System.out.println("input velocity");
+                v = s.nextDouble();
+                System.out.println("input momentum");
+                p = s.nextDouble();
+                return (v/p);    
+            default:
+                System.out.println("input mass");
+                m = s.nextDouble();
+                System.out.println("input velocity");
+                v = s.nextDouble();
+                return (m*v);
+        }
     }
 
-    public void balance() {
-
-    }
-
-    public void getChem() {
-
-    }
+    
 }
