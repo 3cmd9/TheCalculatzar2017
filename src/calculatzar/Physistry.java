@@ -51,6 +51,10 @@ public class Physistry {
         Pressure = (n*gasConstant*temp)/Volume;
         //solve for Volume
         Volume = (n*gasConstant*temp)/Pressure;
+        //solve for moles
+        n = (Pressure*Volume)/(gasConstant*temp);
+        //solve for temperature
+        temp = (Pressure*Volume)/(n*gasConstant);
     }
 
     public void gas() {
