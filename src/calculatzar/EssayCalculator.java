@@ -58,7 +58,7 @@ public class EssayCalculator {
         String[] wSplit =essay.split(" ");
         return wSplit.length;
     }
-    public int sentenceCount(){
+    public int sentCount(){
         String[] sSplit = essay.split(".\\?\\!");
         return sSplit.length;
     }
