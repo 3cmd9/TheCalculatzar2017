@@ -61,7 +61,7 @@ public class FinancialCalculator {
     
             
     }
-    public double simpleInterest(){
+    public void simpleInterest(){
         Scanner s = new Scanner(System.in);
         System.out.println("Please enter in the principle amount: ");
        double principle=s.nextDouble();
@@ -72,10 +72,10 @@ public class FinancialCalculator {
         for(int i=0;i<year;i++){
         principle+=principle*interestRate/100;
         }
-        return principle;
+        System.out.println("Your final amount is: "+principle);
     }
     
-    public double compoundInterest(){
+    public void compoundInterest(){
           Scanner s = new Scanner(System.in);
         System.out.println("Please enter in the principle amount: ");
        double principle=s.nextDouble();
@@ -86,7 +86,7 @@ public class FinancialCalculator {
         for(int i=0;i<year;i++){
         principle*=1+(interestRate/100);
         }
-        return principle;
+         System.out.println("Your final amount is: "+principle);
     }
     
     public double currencyConversion(){
