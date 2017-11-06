@@ -14,7 +14,10 @@ public class UnitCalculator {
     private static double[] prefixValue = {18, 15, 12, 9, 6, 3, 2, 1, 0, -1, -2, -3, -6, -9, -12, -15, -18};
     
     //String[] for imperial units here
+    private static String[] imperialName = {"Inch", "Foot", "Yard", "Mile", "League"};
+    private static String[] imperialAbb = {"in", "ft", "yd", "ml", "lea"};
     //double[] for value of imperial length units here
+    private static double[] imperialValue = {0.0254, 0.3048, 0.9144, 1609.344, 4828.032};
 
     private static double toMetricBaseUnit(int degreePower, double numberConvert, String unitIs) {
         double numberConverted = 0;
@@ -37,13 +40,23 @@ public class UnitCalculator {
     }
 
     private static double toImperialLength (int degreePower, double numberConvert, String unitIs) {
-
-        return 0;
+  double numberConverted = 0;
+        for (int i = 0; i < imperialName.length; i++) {
+            if (unitIs.contains(imperialName[i])||unitIs.contains(imperialAbb[i])) {
+                numberConverted = numberConvert * Math.pow(imperialValue[i], degreePower);
+            }
+        }
+        return numberConverted;
     }
 
     private static double fromImperialLength(int degreePower, double numberConvert, String unitTo) {
-
-        return 0;
+double numberConverted = 0;
+        for (int i = 0; i < imperialName.length; i++) {
+            if (unitTo.contains(imperialName[i])||unitTo.contains(imperialAbb[i])) {
+                numberConverted = numberConvert / Math.pow(imperialValue[i], degreePower);
+            }
+        }
+        return numberConverted;
     }
 
     /**
