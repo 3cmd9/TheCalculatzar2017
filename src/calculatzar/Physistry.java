@@ -18,24 +18,35 @@ public class Physistry {
     Scanner s = new Scanner(System.in);
 
     public void displacementKinematicsSolver() {
-
         System.out.println("Time:");
-        double t = s.nextDouble();
+        double time = s.nextDouble();
 
         System.out.println("Acceleration:");
-        double a = s.nextDouble();
+        double acceleration = s.nextDouble();
 
         System.out.println("Initial Velocity:");
-        double i = s.nextDouble();
+        double velocityI = s.nextDouble();
 
         System.out.println("Final Velocity:");
-        double f = s.nextDouble();
+        double velovityF = s.nextDouble();
 
-        System.out.println("Displacement = " + i * t + (1 / 2) * a * Math.pow(t, 2));
+        System.out.println("Displacement = " + velocityI * time + (1 / 2) * acceleration * Math.pow(time, 2));
     }
 
-    public void sound() {
+    public void dopplerEffect() {
+        System.out.println("Frequency of Source:");
+        double frequency = s.nextDouble();
 
+        System.out.println("Speed of Wave:");
+        double wave = s.nextDouble();
+
+        System.out.println("Speed of Detector:");
+        double detector = s.nextDouble();
+
+        System.out.println("Speed of Sourcee:");
+        double source = s.nextDouble();
+
+        System.out.println("Doppler Frequency = " + frequency * ((wave + detector) / (wave - source)));
     }
 
     //glen
@@ -52,7 +63,7 @@ public class Physistry {
         double gasConstant = 62.4;
         double temp = s.nextDouble();
         //solve for pressure
-        Pressure = (n*gasConstant*temp)/Volume;
+        Pressure = (n * gasConstant * temp) / Volume;
         //solve for Volume
         Volume = (n*gasConstant*temp)/Pressure;
         //solve for moles

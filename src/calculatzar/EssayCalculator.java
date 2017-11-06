@@ -74,4 +74,8 @@ public class EssayCalculator {
         }
         return cCount;
     }
+    public int parCount(){
+        String[] pSplit = essay.split("\n");
+        return pSplit.length;
+    }
 }
