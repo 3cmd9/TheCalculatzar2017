@@ -34,7 +34,15 @@ public class BaseCalculator {
     }
 
     public static int convertToDecimal(String num, int currentBase) {
-        return 0;
+        String str = num + "";
+        int v = 0;
+        int total = 0;
+        int pow = 0;
+        for (int i = str.length() - 1; i >= 0; i--) {
+            total += v * Math.pow(currentBase, pow);
+            pow++;
+        }
+        return total;
     }
 
     public static String add(String num1, String num2, int base) {
@@ -54,22 +62,22 @@ public class BaseCalculator {
 
         return null;
     }
-    
-    public static String multiply(String num1, String num2, int base){
+
+    public static String multiply(String num1, String num2, int base) {
         int numInDecimal1 = convertToDecimal(num1, base);
         int numInDecimal2 = convertToDecimal(num2, base);
-        
+
         String multipliedValue = convertToBase(numInDecimal1 * numInDecimal2, base);
-        
+
         return multipliedValue;
     }
-    
-    public static String divide(String num1, String num2, int base){
+
+    public static String divide(String num1, String num2, int base) {
         int numInDecimal1 = convertToDecimal(num1, base);
         int numInDecimal2 = convertToDecimal(num2, base);
-        
+
         String multipliedValue = convertToBase(numInDecimal1 / numInDecimal2, base);
-        
+
         return multipliedValue;
     }
 
