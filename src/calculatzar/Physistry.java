@@ -13,15 +13,25 @@ import java.util.Scanner;
  */
 // dont ask about the name.
 public class Physistry {
-    //sanjula
 
+    //sanjula
     Scanner s = new Scanner(System.in);
 
-    public void kinematics() {
+    public void displacementKinematicsSolver() {
 
-        System.out.println("Displacement: ");
-        
         System.out.println("Time:");
+        double t = s.nextDouble();
+
+        System.out.println("Acceleration:");
+        double a = s.nextDouble();
+
+        System.out.println("Initial Velocity:");
+        double i = s.nextDouble();
+
+        System.out.println("Final Velocity:");
+        double f = s.nextDouble();
+
+        System.out.println("Displacement = " + i * t + (1 / 2) * a * Math.pow(t, 2));
     }
 
     public void sound() {
@@ -29,9 +39,19 @@ public class Physistry {
     }
 
     //glen
-
     public void thermodynamics() {
-
+        //Ideal Gas Law
+        double Pressure = s.nextDouble();
+        double Volume = s.nextDouble();
+        double n = s.nextDouble();
+        //(L*mmHg)/(mol*K)
+        double gasConstant = 62.4;
+        double temp = s.nextDouble();
+        //solve for pressure
+        Pressure = (n*gasConstant*temp)/Volume;
+        //solve for Volume
+        Volume = (n*gasConstant*temp)/Pressure;
+        
     }
 
     public void gas() {
@@ -48,7 +68,6 @@ public class Physistry {
     }
 
     //asher
-
     public void stoich() {
 
     }
