@@ -24,9 +24,9 @@ public class BaseCalculator {
         String out = "";
         while(num != 0){
             if(num%base > 9){
-                out += (char)64 + ((num%base) -9);
+                out = (char)(64 + ((num%base) -9)) + out;
             }else{
-                out += num%base;
+                out = num%base + out;
             }
             num/=base;
         }
