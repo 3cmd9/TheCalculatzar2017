@@ -39,7 +39,11 @@ public class Physistry {
     }
 
     //glen
-   public void thermodynamics() {
+   public void specificHeat() {
+        
+    }
+
+    public void idealGasLaw() {
         //Ideal Gas Law
         double Pressure = s.nextDouble();
         double Volume = s.nextDouble();
@@ -55,10 +59,6 @@ public class Physistry {
         n = (Pressure*Volume)/(gasConstant*temp);
         //solve for temperature
         temp = (Pressure*Volume)/(n*gasConstant);
-    }
-
-    public void gas() {
-
     }
 
     //carson
