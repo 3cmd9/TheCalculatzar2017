@@ -98,12 +98,12 @@ public class FinancialCalculator {
         return revenue - expenses;
     }
     
-    /*public double federalIncomeTax(double income){
+    public double federalIncomeTax(double income){
         double totalTax = 0;
         final double[] federalRates = {0.15, 0.205, 0.26, 0.29, 0.33};
         final double[] federalBrackets = {45916, 45915, 50522, 60477};
         
-        for (double i = 0; i < federalBrackets.length; i++) {          
+        for (int i = 0; i < federalBrackets.length; i++) {          
             if (income > 0) {
                 if (income > federalBrackets[i]) {
                     totalTax += federalBrackets[i] * federalRates[i];
@@ -118,7 +118,7 @@ public class FinancialCalculator {
         totalTax += income * 0.33;
         
         return totalTax;  
-    }*/
+    }
     
     public void netWorth(){ 
         System.out.println("Please input the values of your individual assests");
