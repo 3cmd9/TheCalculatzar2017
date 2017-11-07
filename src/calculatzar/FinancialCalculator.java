@@ -5,6 +5,7 @@
  */
 package calculatzar;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -23,8 +24,8 @@ public class FinancialCalculator {
         System.out.println("3.Currency Conversion");
         System.out.println("4.Tax");
         System.out.println("5.Total Tax");
-        System.out.println("6.Profit");
-        System.out.println("7.Income Tax");
+        System.out.println("6.Profit Margins");
+        System.out.println("7.Federal Income Tax");
         System.out.println("8.Net Worth");
         System.out.println("9.Mortgage");
         
@@ -45,10 +46,10 @@ public class FinancialCalculator {
                     taxedTotal();
                 break;
                 case 6:
-                    profit();
+                    profitMargins();
                 break;
                 case 7:
-                    incomeTax();
+                    federalIncomeTax();
                 break;
                 case 8:
                     netWorth();
@@ -94,12 +95,23 @@ public class FinancialCalculator {
         return 0.0;   
     }
     
-    public double profit(double revenue, double expenses){
-        return revenue - expenses;
+    public void profitMargins() {
+        System.out.print("Enter your sales: ");
+        double sales = in.nextDouble();
+        System.out.print("\nEnter your cost of goods/services sold: ");
+        double costs = in.nextDouble();
+        
+        System.out.print("\nYour profit margins are " + (sales - costs) / sales * 100 + "%.");
+        
     }
     
-    public double federalIncomeTax(double income){
+    public void federalIncomeTax() {
+        DecimalFormat df = new DecimalFormat("#.##");
+        
+        System.out.print("Enter your income: ");
+        double income = in.nextDouble();
         double totalTax = 0;
+        
         final double[] federalRates = {0.15, 0.205, 0.26, 0.29, 0.33};
         final double[] federalBrackets = {45916, 45915, 50522, 60477};
         
@@ -116,8 +128,8 @@ public class FinancialCalculator {
             }
         }
         totalTax += income * 0.33;
-        
-        return totalTax;  
+
+        System.out.print("\nYou will pay a total of $" + df.format(totalTax) + " in income tax to the federal governemnt.");
     }
     
     public void netWorth(){ 
