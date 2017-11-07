@@ -19,14 +19,19 @@ public class EssayCalculator {
         essay = ess;
     }
     
-    String tempEssay= essay
-            for (int i=0; i<tempEssay.length(); i++){
-    if (tempEssay.charAt(i)!=','){
-        essay+=tempEssay.charAt(i);
+    public ArrayList<String> noPuncSplitWords(){
+    String tempEssay= essay;
+    String lowercase=tempEssay.toLowerCase();
+        ArrayList<String> words=new ArrayList<>();
+    for (int i=0; i<tempEssay.length(); i++){
+            if (lowercase.charAt(i)>=97&&lowercase.charAt(i)<=122){
+            essay+=tempEssay.charAt(i);
+            }
+        words = splitEssay(' ');
+        essay = tempEssay;
     }
-    ArrayList<String> words = splitEssay(' ')
-            essay = tempEssay;
-}
+        return words;
+    }
     
     public double avgWordLength(){
         ArrayList<String> words = splitEssay(' ');
@@ -49,33 +54,13 @@ public class EssayCalculator {
                 piece = "";
             }
         }
-        if(!piece.equals("")){
-            ess.add(piece);
-        }
         return ess;
     }
-    public int wordCount(){
-        String[] wSplit =essay.split(" ");
-        return wSplit.length;
-    }
-    public int sentCount(){
-        String[] sSplit = essay.split(".\\?\\!");
-        return sSplit.length;
-    }
-    public int charCountSpaces(){
-        return essay.length();
-    }
-    public int charCountNoSpaces(){
-        int cCount=0;
-        for(int i=0; i<essay.length();i++){
-            if(essay.charAt(i)!=' '){
-                cCount++;
-            }
+    public String repeatingWord (){//returns the most repetetive word
+        ArrayList<String> writing = noPuncSplitWords();
+        for (int i=0; i<writing.size();i++){
+            
         }
-        return cCount;
     }
-    public int parCount(){
-        String[] pSplit = essay.split("\n");
-        return pSplit.length;
-    }
+
 }
