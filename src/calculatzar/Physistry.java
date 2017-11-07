@@ -14,12 +14,12 @@ import java.util.Scanner;
 // dont ask about the name.
 public class Physistry {
 
-    //sanjula
     Scanner s = new Scanner(System.in);
 
+    //sanjula
     public void displacementKinematicsSolver() {
         System.out.println("Time (s):");
-        double time = s.nextDouble();        
+        double time = s.nextDouble();
         System.out.println("Acceleration (m/s²):");
         double acceleration = s.nextDouble();
         System.out.println("Initial Velocity (m/s):");
@@ -42,8 +42,8 @@ public class Physistry {
     }
 
     //glen
-   public void specificHeatinWater() {
-       //in Joules
+    public void specificHeatinWater() {
+        //in Joules
         double q;
         //in grams
         System.out.println("Input the mass of the substance in GRAMS");
@@ -53,11 +53,11 @@ public class Physistry {
         //in celcius
         System.out.println("Input initial temperature in CELCIUS");
         double initTemp = s.nextDouble();
-//        in celcius
+        //in celcius
         System.out.println("Input final temperature in CELCIUS");
         double finalTemp = s.nextDouble();
-        q = mass*specificHeat*(finalTemp-initTemp);
-        System.out.println("Heat energy required = "+q+" Joules");
+        q = mass * specificHeat * (finalTemp - initTemp);
+        System.out.println("Heat energy required = " + q + " Joules");
     }
 
     public void idealGasLaw4Pressure() {
@@ -73,7 +73,7 @@ public class Physistry {
         double temp = s.nextDouble();
         //solve for pressure
         Pressure = (n * gasConstant * temp) / Volume;
-        System.out.println("Pressure = "+Pressure+" mmHg");
+        System.out.println("Pressure = " + Pressure + " mmHg");
     }
 
     //carson
@@ -94,29 +94,29 @@ public class Physistry {
         char a = 'w';
         System.out.println("input w(wavelength), v(velocity), or m(mass)");
         a = s.next().charAt(0);
-        switch(a){
+        switch (a) {
             case 'v':
                 System.out.println("input mass");
                 m = s.nextDouble();
                 System.out.println("input wavelength");
                 w = s.nextDouble();
-                return (h/(m*w));
+                return (h / (m * w));
             case 'm':
                 System.out.println("input velocity");
                 v = s.nextDouble();
                 System.out.println("input wavelength");
                 w = s.nextDouble();
-                return (h/(v*w));    
+                return (h / (v * w));
             default:
                 System.out.println("input mass");
                 m = s.nextDouble();
                 System.out.println("input velocity");
                 v = s.nextDouble();
-                return (h/(m*v));
+                return (h / (m * v));
         }
-         
+
     }
-    
+
     public double momentum() {
         double p = 0;
         double v = 0;
@@ -124,27 +124,26 @@ public class Physistry {
         char a = 'p';
         System.out.println("input p(momentum), v(velocity), or m(mass)");
         a = s.next().charAt(0);
-        switch(a){
+        switch (a) {
             case 'v':
                 System.out.println("input mass");
                 m = s.nextDouble();
                 System.out.println("input momentum");
                 p = s.nextDouble();
-                return (m/p);
+                return (m / p);
             case 'm':
                 System.out.println("input velocity");
                 v = s.nextDouble();
                 System.out.println("input momentum");
                 p = s.nextDouble();
-                return (v/p);    
+                return (v / p);
             default:
                 System.out.println("input mass");
                 m = s.nextDouble();
                 System.out.println("input velocity");
                 v = s.nextDouble();
-                return (m*v);
+                return (m * v);
         }
     }
 
-    
 }
