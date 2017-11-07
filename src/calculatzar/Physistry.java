@@ -17,7 +17,7 @@ public class Physistry {
     Scanner s = new Scanner(System.in);
 
     //sanjula
-    public void displacementKinematicsSolver() {
+    public void displacementKinematicsSolver() { 
         System.out.println("Time (s):");
         double time = s.nextDouble();
         System.out.println("Acceleration (m/s²):");
