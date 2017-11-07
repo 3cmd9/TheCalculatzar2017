@@ -45,10 +45,10 @@ public class FinancialCalculator {
                     taxedTotal();
                 break;
                 case 6:
-                    profit();
+                    //profit();
                 break;
                 case 7:
-                    incomeTax();
+                    federalIncomeTax();
                 break;
                 case 8:
                     netWorth();
@@ -94,11 +94,14 @@ public class FinancialCalculator {
         return 0.0;   
     }
     
-    public double profit(double revenue, double expenses){
+    public double profit(double revenue, double expenses) {
         return revenue - expenses;
     }
     
-    public double federalIncomeTax(double income){
+    public void federalIncomeTax() {
+        System.out.print("Enter your income: ");
+        double income = in.nextDouble();
+        
         double totalTax = 0;
         final double[] federalRates = {0.15, 0.205, 0.26, 0.29, 0.33};
         final double[] federalBrackets = {45916, 45915, 50522, 60477};
@@ -117,7 +120,7 @@ public class FinancialCalculator {
         }
         totalTax += income * 0.33;
         
-        return totalTax;  
+        System.out.print("\nYou will pay a total of $" + totalTax + " in income tax to the federal governemnt.");
     }
     
     public void netWorth(){ 
