@@ -19,14 +19,19 @@ public class EssayCalculator {
         essay = ess;
     }
     
-    String tempEssay= essay
-            for (int i=0; i<tempEssay.length(); i++){
-    if (tempEssay.charAt(i)!=','){
-        essay+=tempEssay.charAt(i);
+    public ArrayList<String> noPuncSplitWords(){
+    String tempEssay= essay;
+    String lowercase=tempEssay.toLowerCase();
+        ArrayList<String> words=new ArrayList<>();
+    for (int i=0; i<tempEssay.length(); i++){
+            if (lowercase.charAt(i)>=97&&lowercase.charAt(i)<=122){
+            essay+=tempEssay.charAt(i);
+            }
+        words = splitEssay(' ');
+        essay = tempEssay;
     }
-    ArrayList<String> words = splitEssay(' ')
-            essay = tempEssay;
-}
+        return words;
+    }
     
     public double avgWordLength(){
         ArrayList<String> words = splitEssay(' ');
@@ -49,10 +54,13 @@ public class EssayCalculator {
                 piece = "";
             }
         }
-        if(!piece.equals("")){
-            ess.add(piece);
-        }
         return ess;
+    }
+    public String repeatingWord (){//returns the most repetetive word
+        ArrayList<String> writing = noPuncSplitWords();
+        for (int i=0; i<writing.size();i++){
+            
+        }
     }
     public int wordCount(){
         String[] wSplit =essay.split(" ");
@@ -68,9 +76,8 @@ public class EssayCalculator {
     public int charCountNoSpaces(){
         int cCount=0;
         for(int i=0; i<essay.length();i++){
-            if(essay.charAt(i)!=' '){
-                cCount++;
-            }
+            if(essay.charAt(i)!=' ')
+                cCount++;        
         }
         return cCount;
     }
@@ -78,4 +85,5 @@ public class EssayCalculator {
         String[] pSplit = essay.split("\n");
         return pSplit.length;
     }
+
 }
