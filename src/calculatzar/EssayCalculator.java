@@ -61,6 +61,7 @@ public class EssayCalculator {
         for (int i=0; i<writing.size();i++){
             
         }
+        return "fghc";
     }
     public int wordCount(){
         String[] wSplit =essay.split(" ");
