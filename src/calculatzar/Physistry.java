@@ -53,7 +53,7 @@ public class Physistry {
         //in celcius
         System.out.println("Input initial temperature in CELCIUS");
         double initTemp = s.nextDouble();
-//        in celcius
+        //in celcius
         System.out.println("Input final temperature in CELCIUS");
         double finalTemp = s.nextDouble();
         q = mass * specificHeat * (finalTemp - initTemp);
